@@ -3,12 +3,12 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class SpotifyDataService {
+export class CoinDataService {
 
   constructor(private http: Http) { }
 
-  getSpotifyData() {
-  
-  }
+  getLitecoin() {
+    return this.http.get('https://api.coinmarketcap.com/v1/ticker/litecoin/?convert=EUR').map( res => res.json());
+  };
 
 }

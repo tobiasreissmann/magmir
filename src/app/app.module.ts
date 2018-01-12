@@ -9,7 +9,9 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { WeatherService } from './weather.service';
 import { ForecastComponent } from './forecast/forecast.component';
 import { SpotifyComponent } from './spotify/spotify.component';
-import { SpotifyDataService} from './spotify-data.service';
+import { SpotifyDataService} from './spotifyData.service';
+import { LitecoinValueComponent } from './litecoin-value/litecoin-value.component';
+import { CoinDataService } from './coinData.service';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { SpotifyDataService} from './spotify-data.service';
     ClockComponent,
     TemperatureComponent,
     ForecastComponent,
-    SpotifyComponent
+    SpotifyComponent,
+    LitecoinValueComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { SpotifyDataService} from './spotify-data.service';
   ],
   providers: [
     WeatherService,
-    SpotifyDataService
+    SpotifyDataService,
+    CoinDataService
   ],
   bootstrap: [AppComponent]
 })

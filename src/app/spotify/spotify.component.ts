@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyDataService } from '../spotifyData.service'
 
 @Component({
   selector: 'app-spotify',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpotifyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _spotifyDataService: SpotifyDataService) { }
 
   ngOnInit() {
+   /* this._spotifyDataService.getSpotifyData().subscribe(
+      response => {
+        //console.log('AAAAAAAAAAAAAA'+response)
+      }      
+    )*/
   }
-
 }
